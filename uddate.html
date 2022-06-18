@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Esports Community Demo Project</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+
+    </head>
+    <body>
+    <center><h1>Update Player Data</h1></center>
+    <center><input id="playerID" maxlength="50" placeholder="Player ID" name="playerID" type="text" /><br><br>
+        <p>You can change your Organisation/Clan only.</p>
+        <input id="playerOrg" maxlength="50" placeholder="Organisation/Clan" name="playerOrg" type="playerOrg" /><br><br>
+        <input type="button" value="UPDATE DATA" onclick="updateData();"/></center>
+    <p id="show"></p>
+    <script>
+        function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+            var url = dbBaseUrl + apiEndPointUrl;
+            var jsonObj;
+            $.post(url, reqString, function (result) {
+                jsonObj = JSON.parse(result);
+            }).fail(function (result) {
+                var dataJsonObj = result.responseText;
+                jsonObj = JSON.parse(dataJsonObj);
+            });
+            return jsonObj;
+        }
+        function updateData(){
+            var token = "90939385|-31949290100259257|90941327";
+            var dbname = "EsportDemoProject";
+            var relationName = "EsportPlayer-Data";
+            var playerID = parseInt(document.getElementById("playerID").value);
+            var playerOrg = document.getElementById("playerOrg").value;
+            
+            var jsonObj = {
+                playerOrg : playerOrg
+            };
+            var reqString = createUPDATERecordRequest(token, JSON.stringify(jsonObj), dbname, relationName, roll);
+            alert(reqString);
+            jQuery.ajaxSetup({async: false});
+            var resultObj = executeCommand(reqString,
+                    "http://api.login2explore.com:5577", "/api/iml");
+            jQuery.ajaxSetup({async: true});
+            alert(JSON.stringify(resultObj));
+            
+        }
+    </script>
+    </body>
+</html>
