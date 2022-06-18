@@ -1,9 +1,9 @@
 # JasonPowerDB
 My first GitHub repository of creating Webpage using HTML/JavaScript (NetBeans) and database used JasonPowerDB.
 
-**Some features of JsonPowerDB are:**
+# Some features of JsonPowerDB are:**
 
-# Nimble, simple to use, in memory, real time.
+-Nimble, simple to use, in memory, real time.
 -Serverless support - fast development - cuts time to market
 -Built around the world's fastest indexing engine PowerIndex
 -Webservices API - Low Dev Cost
