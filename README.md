@@ -1,5 +1,7 @@
 # JasonPowerDB
-My first GitHub repository of creating Webpage using HTML/JavaScript (NetBeans) and database used JasonPowerDB.
+
+## My first GitHub repository of creating Webpage using HTML/JavaScript (NetBeans) and database used JasonPowerDB.
+## This mini-project performs CRUD operations using JsonPowerDB.
 
 # Some features of JsonPowerDB are:
 
@@ -12,3 +14,4 @@ My first GitHub repository of creating Webpage using HTML/JavaScript (NetBeans) 
 -Inbuilt support for querying multiple databases
 -Serverside Native NoSQL - best performance
 -Multi-mode database - One solution to a variety of data
+
