@@ -16,4 +16,12 @@
 * Serverside Native NoSQL - best performance
 * Multi-mode database - One solution to a variety of data
 
+### Use cases:
 
+* All RDMS use cases.
+* All key-value use cases.
+* All document use cases.
+* Time series/geospatial analytics.
+* Real time application for data analytics.
+* Live working HTML templates.
+* Any software application that needs backend DB. (Dynamic web-apps/Mobile/Desktop Apps)
